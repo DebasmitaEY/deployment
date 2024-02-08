@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffe600;
+        }
+
+        p {
+            color: #c4c4cd;
+        }
+
+        .btn {
+            background-color: #ffe600;
+            color: #1a1a2a;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            animation: rainbow 2s linear infinite alternate;
+        }
+
+        .btn:hover {
+            background-color: #c4c4cd;
+        }
+
+        @keyframes rainbow {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .hidden {
+            display: none;
+            margin-top: 20px;
+            color: #ffe600;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to My Django App!</h1>
+        <p>This is a single page rendered using Django.</p>
+        <button class="btn" onclick="showText()">Click Me</button>
+        <div class="hidden" id="hiddenText">
+            Believe in yourself !!
+        </div>
+    </div>
+
+    <script>
+        function showText() {
+            var hiddenElement = document.getElementById("hiddenText");
+            hiddenElement.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

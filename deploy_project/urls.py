@@ -1,8 +1,7 @@
-from django.contrib import admin
+# urls.py
 from django.urls import path
-from deploy_app import views
+from deploy_app.views import home
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
+    path('', home, name='home'),
 ]
